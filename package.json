@@ -1,0 +1,25 @@
+{
+  "name": "mongo-1",
+  "version": "1.0.0",
+  "description": "\"Starting with Mongo\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tharak-N/mongo-1.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "tharak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tharak-N/mongo-1/issues"
+  },
+  "homepage": "https://github.com/Tharak-N/mongo-1#readme",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}
