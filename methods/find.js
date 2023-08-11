@@ -1,5 +1,6 @@
 const db = require('../database')
 const Employee = require('../models/employee');
+const ShoppingItems = require('../models/shopping-items')
 
 db.connect()
 
@@ -17,9 +18,13 @@ const findingEmployee = async () => {
     /**find() with projection will give the specific fields in the query returned documents */
     // let data = await Employee.find({ name: 'Tharak'}, { emailId:1 })
 
-    let data = await Employee.find({})
+    let EmployeeData = await Employee.find({})
+    let ShoppingData = (await ShoppingItems.find({}))
 
-    console.log("employee is", data)
+    console.log(
+        "Employee Data is", "\n", EmployeeData,
+        "Shopping Data is", "\n", ShoppingData
+    )
 }
 
 findingEmployee()
