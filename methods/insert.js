@@ -6,8 +6,8 @@ db.connect()
 
 const employee = new Employee({
     name: "Tharak",
-    emailId: "nadendlatharak123@gmail.com",
-    companyId: 2,
+    emailId: "nadendlatharak23@gmail.com",
+    companyId: 3,
 })
 
 const addingDocument = async () => {
@@ -29,6 +29,6 @@ const addingDocument = async () => {
 }
 
 addingDocument()
-module.exports = insertOne
+module.exports = addingDocument
 
 

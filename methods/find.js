@@ -15,7 +15,9 @@ const findingEmployee = async () => {
     // let data = await Employee.findById({ _id:"64d4c60843ee8805798ffc2d" })
 
     /**find() with projection will give the specific fields in the query returned documents */
-    let data = await Employee.find({ name: 'Tharak'}, { emailId:1 })
+    // let data = await Employee.find({ name: 'Tharak'}, { emailId:1 })
+
+    let data = await Employee.find({})
 
     console.log("employee is", data)
 }
