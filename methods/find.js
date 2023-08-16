@@ -18,7 +18,10 @@ const findingEmployee = async () => {
     /**find() with projection will give the specific fields in the query returned documents */
     // let data = await Employee.find({ name: 'Tharak'}, { emailId:1 })
 
-    let EmployeeData = await Employee.find({})
+    /**Using forEach method on the find() method */
+    let EmployeeData = (await Employee.find({})).forEach((item) => {
+        console.log(item)
+    })
     let ShoppingData = (await ShoppingItems.find({}))
 
     console.log(
