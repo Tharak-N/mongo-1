@@ -167,16 +167,16 @@ const matchAndGroup = async () => {
     let findData = await Employee.find({})
     console.log("the find data is", findData)
 
-    /**filter the docs with name rajesh and grouping them to get the email id */
-    // let aggregation = await Employee.aggregate([
-    //     {
-    //         $match: {$and: [ {name: 'rajesh'}, {companyId: {$gt: 1}} ]}
-    //     },
-    //     { 
-    //         $group: { _id: "$emailId" }
-    //     },
-    // ])
-    // console.log("the aggregatoion reuslt is", aggregation)
+    /**filter the docs with name and grouping them to get the position */
+    let aggregation = await Employee.aggregate([
+        {
+            $match: { salary: {$gt: 80000 }}
+        },
+        { 
+            $group: { _id: "$position" }
+        },
+    ])
+    console.log("the aggregatoion reuslt is", aggregation)
 
 }
 
