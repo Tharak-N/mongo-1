@@ -28,7 +28,7 @@ const out = async () => {
     {
       $group: {
         _id: "$employee_id",
-        details: { $push: { employee_name: "$first_name", employee_salary: "$salary"} }
+        details: { $push: "$$ROOT" },
       }
     },
     {
