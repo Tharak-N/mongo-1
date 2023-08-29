@@ -12,7 +12,7 @@ const sortAndLimit = async () => {
       },
     },
     {
-      $limit: 3
+      $limit: 1
     }
   ])
 
